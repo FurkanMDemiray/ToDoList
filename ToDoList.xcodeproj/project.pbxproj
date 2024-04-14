@@ -18,6 +18,9 @@
 		DD0D4B7B2BCC1A4600D84175 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DD0D4B7A2BCC1A4600D84175 /* FirebaseFirestore */; };
 		DD0D4B812BCC277800D84175 /* UIVcExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B802BCC277700D84175 /* UIVcExtension.swift */; };
 		DD0D4B832BCC285C00D84175 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B822BCC285C00D84175 /* ToDoListVC.swift */; };
+		DD0D4B872BCC32C300D84175 /* ToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B852BCC32C300D84175 /* ToDoListCell.swift */; };
+		DD0D4B882BCC32C300D84175 /* ToDoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD0D4B862BCC32C300D84175 /* ToDoListCell.xib */; };
+		DD0D4B8A2BCC37EF00D84175 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B892BCC37EF00D84175 /* ToDo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		DD0D4B752BCC16AF00D84175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD0D4B802BCC277700D84175 /* UIVcExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVcExtension.swift; sourceTree = "<group>"; };
 		DD0D4B822BCC285C00D84175 /* ToDoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
+		DD0D4B852BCC32C300D84175 /* ToDoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListCell.swift; sourceTree = "<group>"; };
+		DD0D4B862BCC32C300D84175 /* ToDoListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoListCell.xib; sourceTree = "<group>"; };
+		DD0D4B892BCC37EF00D84175 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		DD0D4B602BCC161C00D84175 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				DD0D4B842BCC329C00D84175 /* Cells */,
 				DD0D4B7F2BCC275800D84175 /* Extensions */,
 				DD0D4B7E2BCC1D9400D84175 /* Models */,
 				DD0D4B7D2BCC1D8D00D84175 /* ModelViews */,
@@ -100,6 +107,7 @@
 		DD0D4B7E2BCC1D9400D84175 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DD0D4B892BCC37EF00D84175 /* ToDo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -110,6 +118,15 @@
 				DD0D4B802BCC277700D84175 /* UIVcExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DD0D4B842BCC329C00D84175 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DD0D4B852BCC32C300D84175 /* ToDoListCell.swift */,
+				DD0D4B862BCC32C300D84175 /* ToDoListCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD0D4B6B2BCC161E00D84175 /* Assets.xcassets in Resources */,
+				DD0D4B882BCC32C300D84175 /* ToDoListCell.xib in Resources */,
 				DD0D4B762BCC16AF00D84175 /* GoogleService-Info.plist in Resources */,
 				DD0D4B6E2BCC161E00D84175 /* Base in Resources */,
 				DD0D4B692BCC161C00D84175 /* Base in Resources */,
@@ -192,10 +210,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD0D4B662BCC161C00D84175 /* LoginVC.swift in Sources */,
+				DD0D4B8A2BCC37EF00D84175 /* ToDo.swift in Sources */,
 				DD0D4B622BCC161C00D84175 /* AppDelegate.swift in Sources */,
 				DD0D4B832BCC285C00D84175 /* ToDoListVC.swift in Sources */,
 				DD0D4B812BCC277800D84175 /* UIVcExtension.swift in Sources */,
 				DD0D4B642BCC161C00D84175 /* SceneDelegate.swift in Sources */,
+				DD0D4B872BCC32C300D84175 /* ToDoListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

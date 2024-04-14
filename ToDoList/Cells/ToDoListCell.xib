@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ToDoListCell" customModule="ToDoList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSE-EO-IFO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ph4-gZ-RtC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUo-ka-5Qa">
+                                        <rect key="frame" x="4" y="4" width="260" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="fDr-66-EC7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6W-j4-o2K">
+                                        <rect key="frame" x="268" y="4" width="48" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="checkBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ncu-uO-gkN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rUo-ka-5Qa" firstAttribute="leading" secondItem="ph4-gZ-RtC" secondAttribute="leading" constant="4" id="0Ga-2E-5dD"/>
+                                    <constraint firstAttribute="bottom" secondItem="rUo-ka-5Qa" secondAttribute="bottom" constant="4" id="1Hz-eH-fHD"/>
+                                    <constraint firstAttribute="trailing" secondItem="F6W-j4-o2K" secondAttribute="trailing" constant="4" id="I5g-V4-QzK"/>
+                                    <constraint firstItem="rUo-ka-5Qa" firstAttribute="top" secondItem="ph4-gZ-RtC" secondAttribute="top" constant="4" id="LyI-dc-f1F"/>
+                                    <constraint firstItem="F6W-j4-o2K" firstAttribute="leading" secondItem="rUo-ka-5Qa" secondAttribute="trailing" constant="4" id="PlG-Wx-7cs"/>
+                                    <constraint firstAttribute="bottom" secondItem="F6W-j4-o2K" secondAttribute="bottom" constant="4" id="ut6-BT-hqj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ph4-gZ-RtC" firstAttribute="leading" secondItem="VSE-EO-IFO" secondAttribute="leading" id="LNe-xl-ug1"/>
+                            <constraint firstAttribute="bottom" secondItem="ph4-gZ-RtC" secondAttribute="bottom" id="SbH-Qb-iXR"/>
+                            <constraint firstAttribute="trailing" secondItem="ph4-gZ-RtC" secondAttribute="trailing" id="VsS-G9-dhq"/>
+                            <constraint firstItem="ph4-gZ-RtC" firstAttribute="top" secondItem="VSE-EO-IFO" secondAttribute="top" id="yMu-I0-0Ih"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VSE-EO-IFO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2Rr-5W-Fcr"/>
+                    <constraint firstAttribute="trailing" secondItem="VSE-EO-IFO" secondAttribute="trailing" id="M2e-LV-Njp"/>
+                    <constraint firstAttribute="bottom" secondItem="VSE-EO-IFO" secondAttribute="bottom" id="mVi-p8-K1S"/>
+                    <constraint firstItem="VSE-EO-IFO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="x0B-I5-Bz0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkButton" destination="F6W-j4-o2K" id="ISJ-Hn-4ae"/>
+                <outlet property="toDoLabel" destination="rUo-ka-5Qa" id="lE3-QD-nDV"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="-113.38028169014085"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
