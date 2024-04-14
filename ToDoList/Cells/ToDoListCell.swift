@@ -9,40 +9,35 @@ import UIKit
 
 class ToDoListCell: UITableViewCell {
 
-    @IBOutlet weak var toDoLabel: UILabel!
-    @IBOutlet weak var checkButton: UIButton!
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var imageCheck: UIImageView!
 
+    // add gesture recognizer to the image
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(checkButtonTapped))
+        imageCheck.addGestureRecognizer(tap)
+        imageCheck.isUserInteractionEnabled = true
+        // set size of the image
+        imageCheck.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    @objc func checkButtonTapped() {
+        print("check button tapped")
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func setCell(with toDoModel: ToDo) {
+        label.text = toDoModel.toDoText
 
-        // Configure the view for the selected state
-    }
-    @IBAction func checkBtnClicked(_ sender: Any) {
+        if toDoModel.isDone ?? false {
+            imageCheck.image = UIImage(named: "check")
 
-    }
 
-    func setCell(toDo: ToDo?) {
-
-        guard let toDo = toDo else { return }
-        //toDoLabel.text = toDo.toDoText
-
-        if toDo.isDone ?? false {
-            checkButton.setImage(UIImage(named: "check"), for: .normal)
-            checkButton.imageView?.contentMode = .scaleAspectFit
         } else {
-            checkButton.setImage(UIImage(named: "cross"), for: .normal)
-            checkButton.imageView?.contentMode = .scaleAspectFit
+            imageCheck.image = UIImage(named: "cross")
         }
-
     }
 
 }

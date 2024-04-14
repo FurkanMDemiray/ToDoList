@@ -11,18 +11,19 @@ class ToDoListVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var toDo = ToDo(toDoText: "süt al", isDone: false, id: UUID())
-    
+    let toDo = ToDo(toDoText: "süt al", isDone: false, id: UUID())
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureTableView()
     }
-    
+
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(ToDoListCell.self, forCellReuseIdentifier: "ToDoListCell")
+        tableView.register(UINib(nibName: "ToDoListCell", bundle: nil), forCellReuseIdentifier: "toDoListCell")
+        tableView.rowHeight = 40
     }
 
 
@@ -35,9 +36,9 @@ extension ToDoListVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoListCell", for: indexPath) as! ToDoListCell
-        //cell.setCell(toDo: self.toDo)
-        cell.backgroundColor = .red
+        let cell = tableView.dequeueReusableCell(withIdentifier: "toDoListCell", for: indexPath) as! ToDoListCell
+        cell.setCell(with: toDo)
+        //cell.backgroundColor = .red
         return cell
     }
 
