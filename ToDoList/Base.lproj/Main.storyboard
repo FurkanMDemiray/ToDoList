@@ -139,22 +139,19 @@
                                     <action selector="backBtnClicked:" destination="G7a-iA-Cd1" eventType="touchUpInside" id="rYX-Ly-yIV"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="nd2-W2-F52">
-                                <rect key="frame" x="8" y="58" width="377" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="kSU-0u-Ux0"/>
-                                </constraints>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="nd2-W2-F52">
+                                <rect key="frame" x="8" y="74" width="377" height="365"/>
                                 <connections>
                                     <action selector="datePickerClicked:" destination="G7a-iA-Cd1" eventType="valueChanged" id="B7p-uJ-1BV"/>
                                 </connections>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To Do..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZu-ik-i74">
-                                <rect key="frame" x="8" y="190.33333333333334" width="377" height="34"/>
+                                <rect key="frame" x="8" y="471" width="377" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7y7-VU-SAO">
-                                <rect key="frame" x="146.66666666666666" y="288.33333333333331" width="100" height="35"/>
+                                <rect key="frame" x="146.66666666666666" y="569" width="100" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Wti-aI-tqk"/>
                                 </constraints>
@@ -169,14 +166,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MFv-ab-nmR" firstAttribute="top" secondItem="Wp5-7t-g9S" secondAttribute="top" constant="8" id="6jJ-Oq-gv2"/>
+                            <constraint firstItem="Wp5-7t-g9S" firstAttribute="trailing" secondItem="nd2-W2-F52" secondAttribute="trailing" constant="8" id="7vR-IV-mAx"/>
+                            <constraint firstItem="nd2-W2-F52" firstAttribute="leading" secondItem="Wp5-7t-g9S" secondAttribute="leading" constant="8" id="7wD-8n-4EJ"/>
                             <constraint firstItem="MFv-ab-nmR" firstAttribute="leading" secondItem="Wp5-7t-g9S" secondAttribute="leading" constant="8" id="AaL-oQ-Rg4"/>
                             <constraint firstItem="jZu-ik-i74" firstAttribute="top" secondItem="nd2-W2-F52" secondAttribute="bottom" constant="32" id="DmU-ed-vYo"/>
-                            <constraint firstItem="Wp5-7t-g9S" firstAttribute="trailing" secondItem="nd2-W2-F52" secondAttribute="trailing" constant="8" id="NT2-3W-FUr"/>
                             <constraint firstItem="Wp5-7t-g9S" firstAttribute="trailing" secondItem="jZu-ik-i74" secondAttribute="trailing" constant="8" id="PzZ-tk-pM8"/>
-                            <constraint firstItem="nd2-W2-F52" firstAttribute="leading" secondItem="Y7n-Wb-jA4" secondAttribute="leading" constant="8" id="R5Z-sE-VQp"/>
                             <constraint firstItem="7y7-VU-SAO" firstAttribute="centerX" secondItem="Y7n-Wb-jA4" secondAttribute="centerX" id="T9K-TK-tGZ"/>
                             <constraint firstItem="7y7-VU-SAO" firstAttribute="top" secondItem="jZu-ik-i74" secondAttribute="bottom" constant="64" id="bhC-QW-e18"/>
-                            <constraint firstItem="nd2-W2-F52" firstAttribute="top" secondItem="MFv-ab-nmR" secondAttribute="bottom" constant="16" id="cK8-hH-lgH"/>
+                            <constraint firstItem="nd2-W2-F52" firstAttribute="top" secondItem="MFv-ab-nmR" secondAttribute="bottom" constant="32" id="cK8-hH-lgH"/>
                             <constraint firstItem="jZu-ik-i74" firstAttribute="leading" secondItem="Wp5-7t-g9S" secondAttribute="leading" constant="8" id="gsw-Br-VrQ"/>
                         </constraints>
                     </view>

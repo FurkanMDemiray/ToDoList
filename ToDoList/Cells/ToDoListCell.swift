@@ -33,7 +33,14 @@ class ToDoListCell: UITableViewCell {
         }
     }
 
-    func changeImage() {
+    func changeImage(with toDoModel: ToDo) {
+       // update isDone status
+
+        let db = Firestore.firestore()
+        if let id = toDoModel.id {
+            db.collection("ToDoList").document(id).updateData(["isDone": !toDoModel.isDone!])
+        }
+
         if imageCheck.image == UIImage(named: "check") {
             imageCheck.image = UIImage(named: "cross")
         } else {

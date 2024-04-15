@@ -16,7 +16,6 @@ class ToDoListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        //getToDoList()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -45,9 +44,8 @@ class ToDoListVC: UIViewController {
                 self.toDoList.removeAll()
                 for document in querySnapshot!.documents {
                     var toDo = ToDo()
-                    if let id = document.get("id") {
-                        toDo.id = id as? String
-                    }
+                    let id = document.documentID
+                    toDo.id = id
                     if let toDoText = document.get("toDoText") {
                         toDo.toDoText = toDoText as? String
                     }
@@ -84,10 +82,17 @@ extension ToDoListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // change image
         let cell = tableView.cellForRow(at: indexPath) as! ToDoListCell
-        cell.changeImage()
+        cell.changeImage(with: toDoList[indexPath.row])
+    }
 
-        // change isDone
-        //toDo.isDone = !toDo.isDone!
-
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let db = Firestore.firestore()
+            if let id = toDoList[indexPath.row].id {
+                db.collection("ToDoList").document(id).delete()
+                toDoList.remove(at: indexPath.row)
+                tableView.reloadData()
+            }
+        }
     }
 }
