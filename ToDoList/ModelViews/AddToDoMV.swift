@@ -15,8 +15,9 @@ class AddToDoMV {
         // add to dolist on firestore
         let db = Firestore.firestore()
         let docRef = db.collection("ToDoList").document()
+        let id = UUID().uuidString
 
-        let toDoDict: [String: Any] = ["toDoText": toDo.toDoText ?? "", "date": toDo.date ?? Date(), "isDone": toDo.isDone ?? false , "id": docRef.documentID]
+        let toDoDict: [String: Any] = ["toDoText": toDo.toDoText ?? "", "date": toDo.date ?? "", "isDone": toDo.isDone ?? false, "id": id]
 
         docRef.setData(toDoDict) { (error) in
             if let error = error {

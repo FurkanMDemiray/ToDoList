@@ -21,7 +21,6 @@
 		DD0D4B872BCC32C300D84175 /* ToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B852BCC32C300D84175 /* ToDoListCell.swift */; };
 		DD0D4B882BCC32C300D84175 /* ToDoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD0D4B862BCC32C300D84175 /* ToDoListCell.xib */; };
 		DD0D4B8A2BCC37EF00D84175 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B892BCC37EF00D84175 /* ToDo.swift */; };
-		DD0D4B8C2BCD4C7800D84175 /* ToDoListMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B8B2BCD4C7800D84175 /* ToDoListMV.swift */; };
 		DD0D4B8E2BCD523700D84175 /* AddToDoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B8D2BCD523700D84175 /* AddToDoVC.swift */; };
 		DD0D4B902BCD540400D84175 /* AddToDoMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B8F2BCD540400D84175 /* AddToDoMV.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		DD0D4B852BCC32C300D84175 /* ToDoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListCell.swift; sourceTree = "<group>"; };
 		DD0D4B862BCC32C300D84175 /* ToDoListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoListCell.xib; sourceTree = "<group>"; };
 		DD0D4B892BCC37EF00D84175 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
-		DD0D4B8B2BCD4C7800D84175 /* ToDoListMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListMV.swift; sourceTree = "<group>"; };
 		DD0D4B8D2BCD523700D84175 /* AddToDoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoVC.swift; sourceTree = "<group>"; };
 		DD0D4B8F2BCD540400D84175 /* AddToDoMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoMV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +105,6 @@
 		DD0D4B7D2BCC1D8D00D84175 /* ModelViews */ = {
 			isa = PBXGroup;
 			children = (
-				DD0D4B8B2BCD4C7800D84175 /* ToDoListMV.swift */,
 				DD0D4B8F2BCD540400D84175 /* AddToDoMV.swift */,
 			);
 			path = ModelViews;
@@ -218,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD0D4B8C2BCD4C7800D84175 /* ToDoListMV.swift in Sources */,
 				DD0D4B662BCC161C00D84175 /* LoginVC.swift in Sources */,
 				DD0D4B8A2BCC37EF00D84175 /* ToDo.swift in Sources */,
 				DD0D4B622BCC161C00D84175 /* AppDelegate.swift in Sources */,

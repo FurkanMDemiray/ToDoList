@@ -11,7 +11,7 @@ import Foundation
 struct ToDo {
     var toDoText: String?
     var isDone: Bool?
-    var id: UUID?
+    var id: String?
     var date: Date?
 }
 
