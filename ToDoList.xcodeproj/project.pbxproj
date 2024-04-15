@@ -23,6 +23,7 @@
 		DD0D4B8A2BCC37EF00D84175 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B892BCC37EF00D84175 /* ToDo.swift */; };
 		DD0D4B8C2BCD4C7800D84175 /* ToDoListMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B8B2BCD4C7800D84175 /* ToDoListMV.swift */; };
 		DD0D4B8E2BCD523700D84175 /* AddToDoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B8D2BCD523700D84175 /* AddToDoVC.swift */; };
+		DD0D4B902BCD540400D84175 /* AddToDoMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0D4B8F2BCD540400D84175 /* AddToDoMV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		DD0D4B892BCC37EF00D84175 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		DD0D4B8B2BCD4C7800D84175 /* ToDoListMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListMV.swift; sourceTree = "<group>"; };
 		DD0D4B8D2BCD523700D84175 /* AddToDoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoVC.swift; sourceTree = "<group>"; };
+		DD0D4B8F2BCD540400D84175 /* AddToDoMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoMV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				DD0D4B8B2BCD4C7800D84175 /* ToDoListMV.swift */,
+				DD0D4B8F2BCD540400D84175 /* AddToDoMV.swift */,
 			);
 			path = ModelViews;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				DD0D4B812BCC277800D84175 /* UIVcExtension.swift in Sources */,
 				DD0D4B8E2BCD523700D84175 /* AddToDoVC.swift in Sources */,
 				DD0D4B642BCC161C00D84175 /* SceneDelegate.swift in Sources */,
+				DD0D4B902BCD540400D84175 /* AddToDoMV.swift in Sources */,
 				DD0D4B872BCC32C300D84175 /* ToDoListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

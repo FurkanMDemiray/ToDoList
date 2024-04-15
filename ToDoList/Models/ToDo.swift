@@ -12,5 +12,6 @@ struct ToDo {
     var toDoText: String?
     var isDone: Bool?
     var id: UUID?
+    var date: Date?
 }
 

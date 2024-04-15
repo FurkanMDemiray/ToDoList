@@ -11,7 +11,7 @@ class ToDoListVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var toDo = ToDo(toDoText: "süt al", isDone: false, id: UUID())
+    var toDo = ToDo(toDoText: "süt al", isDone: false, id: UUID(), date: Date())
 
     override func viewDidLoad() {
         super.viewDidLoad()
