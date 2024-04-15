@@ -11,12 +11,16 @@ class ToDoListVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    let toDo = ToDo(toDoText: "süt al", isDone: false, id: UUID())
+    var toDo = ToDo(toDoText: "süt al", isDone: false, id: UUID())
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureTableView()
+
+    }
+
+    @IBAction func addBtnClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toAddVC", sender: nil)
     }
 
     private func configureTableView() {
@@ -38,11 +42,16 @@ extension ToDoListVC: UITableViewDelegate, UITableViewDataSource {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "toDoListCell", for: indexPath) as! ToDoListCell
         cell.setCell(with: toDo)
-        //cell.backgroundColor = .red
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // change image
+        let cell = tableView.cellForRow(at: indexPath) as! ToDoListCell
+        cell.changeImage()
+
+        // change isDone
+        //toDo.isDone = !toDo.isDone!
 
     }
 }
